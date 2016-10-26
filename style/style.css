@@ -12,6 +12,13 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: "Razorback";
+  src: url("../fonts/NCAA_Arkansas_Razorback.otf.eot");
+  src: url("../fonts/NCAA_Arkansas_Razorback.otf") format("otf"), url("../fonts/NCAA_Arkansas_Razorback.ttf") format("ttf"), url("../fonts/NCAA_Arkansas_Razorback.svg") format("svg"), url("../fonts/NCAA_Arkansas_Razorback.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 .pure-button {
   border-radius: 0;
   background-color: #FFDD00;
@@ -166,9 +173,9 @@ body {
   font-family: "Lato", sans-serif; }
 
 .signup-form {
-  background: #E31818; }
+  background: #9D2235; }
   .signup-form .grid-content {
-    background: #E31818;
+    background: #9D2235;
     color: #000; }
     .signup-form .grid-content .pure-button {
       background: #000;
@@ -212,7 +219,7 @@ body {
     color: #00AEF3;
     text-decoration: none; }
     #footer a:hover {
-      color: #E31818; }
+      color: #9D2235; }
   #footer .copyright-footer {
     border: 1px solid #FFDD00; }
     #footer .copyright-footer .copyright-text {
@@ -221,7 +228,7 @@ body {
         margin: 0; }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Gotham A", "Gotham B", sans-serif;
+  font-family: "Razorback", sans-serif;
   color: #0F2446;
   margin: 0; }
 

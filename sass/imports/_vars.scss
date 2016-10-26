@@ -20,8 +20,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Razorback";
+  src: url("../fonts/NCAA_Arkansas_Razorback.otf.eot");
+  src: url("../fonts/NCAA_Arkansas_Razorback.otf") format("otf"),
+  url("../fonts/NCAA_Arkansas_Razorback.ttf") format('ttf'),
+  url("../fonts/NCAA_Arkansas_Razorback.svg") format('svg'),
+  url("../fonts/NCAA_Arkansas_Razorback.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 //Fonts
-$header-font: 'Gotham A', 'Gotham B', sans-serif;
+$header-font: 'Razorback', sans-serif;
 $body-font: 'Lato', sans-serif;
 
 
@@ -29,7 +39,7 @@ $body-font: 'Lato', sans-serif;
 $brand_lt_blue: #00AEF3;
 $brand_dk_blue: #0F2446;
 $brand_white: #fff;
-$brand_red: #E31818;
+$brand_red: #9D2235;
 $brand_yellow: #FFDD00;
 $brand_gray: #F6F6F6;
 $brand_black: #000;
