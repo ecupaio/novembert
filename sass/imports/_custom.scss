@@ -60,6 +60,9 @@ $footer-padding: 1em;
 .main-body {
 	position: relative;
 }
+#countdown-section {
+	height: 100vh;
+}
 #scroller {
 	position: fixed;
 	right: 1em;
@@ -76,10 +79,12 @@ $footer-padding: 1em;
 		}
 	}
 }
-.content-section {
-	height: 100vh;
-	.inner-section {
-		padding: 1em;
+#content {
+	.content-section {
+		height: 100vh;
+		.inner-section {
+			padding: 1em;
+		}
 	}
 }
 .content-section[data-section]:nth-child(odd) {

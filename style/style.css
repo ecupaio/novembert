@@ -74,6 +74,9 @@ Either pass the px number through individually, or set it as a variable */
 .main-body {
   position: relative; }
 
+#countdown-section {
+  height: 100vh; }
+
 #scroller {
   position: fixed;
   right: 1em;
@@ -90,9 +93,9 @@ Either pass the px number through individually, or set it as a variable */
       #scroller .quick-jump .quick-jump-item.active {
         opacity: 1; }
 
-.content-section {
+#content .content-section {
   height: 100vh; }
-  .content-section .inner-section {
+  #content .content-section .inner-section {
     padding: 1em; }
 
 .content-section[data-section]:nth-child(odd) {
@@ -167,10 +170,10 @@ body {
   flex-flow: row wrap; }
 
 .pure-g [class*="pure-u"] {
-  font-family: "Lato", sans-serif; }
+  font-family: "Helvetica", sans-serif; }
 
 .pure-g {
-  font-family: "Lato", sans-serif; }
+  font-family: "Helvetica", sans-serif; }
 
 .signup-form {
   background: #9D2235; }
@@ -233,7 +236,7 @@ h1, h2, h3, h4, h5 {
   margin: 0; }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 14pt;
   color: #0F2446; }
 

@@ -7,7 +7,7 @@ $(document).ready(function() {
             scrollNext();
         }
     });
-    $('body,html').on('mousewheel', function(event, delta) {
+    $('#content').on('mousewheel', function(event, delta) {
         if ($('body,html').is(':animated')) {
             return false;
         }
@@ -17,7 +17,9 @@ $(document).ready(function() {
         if (delta > 0) {
             scrollPrev();
         }
+        //Add conditional for if at top of #content
     });
+
 
     function scrollNext() {
         $('body,html').animate({
