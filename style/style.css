@@ -132,6 +132,7 @@ Either pass the px number through individually, or set it as a variable */
       font-family: "Razorback", sans-serif;
       font-size: 2em; }
   #countdown-section .game-grid {
+    padding-top: 1em;
     font-size: 2em;
     text-transform: uppercase; }
     #countdown-section .game-grid > div {
@@ -276,18 +277,18 @@ body {
     margin-left: 1em; }
 
 #footer {
-  background: #0F2446;
-  color: #FFDD00;
+  background: #636363;
+  color: #fff;
   text-align: center;
   clear: both;
   width: 100%; }
   #footer a {
-    color: #00AEF3;
+    color: #9D2235;
     text-decoration: none; }
     #footer a:hover {
-      color: #9D2235; }
+      color: #fff; }
   #footer .copyright-footer {
-    border: 1px solid #FFDD00; }
+    border: 1px solid #fff; }
     #footer .copyright-footer .copyright-text {
       padding: 1em; }
       #footer .copyright-footer .copyright-text p {

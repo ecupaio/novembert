@@ -16,10 +16,10 @@ $theme_body_link: $charcoal;
 $theme_body_link_hover: $razorback_red;
 $theme_heading: $razorback_red;
 //Footer Colors
-$theme_footer_bg: $brand_dk_blue;
-$theme_footer_txt: $brand_yellow;
-$copyright_link: $brand_lt_blue;
-$copyright_link_hover: $brand_red;
+$theme_footer_bg: $charcoal;
+$theme_footer_txt: $brand_white;
+$copyright_link: $razorback_red;
+$copyright_link_hover: $brand_white;
 //Header Colors
 $theme_header_bg: $brand_white;
 $theme_header_txt: $razorback_red;
@@ -126,6 +126,7 @@ $footer-padding: 1em;
         }
     }
     .game-grid {
+        padding-top: 1em;
         font-size: 2em;
         text-transform: uppercase;
         & > div {
