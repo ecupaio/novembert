@@ -6,22 +6,23 @@
 //$brand_red
 //$brand_yellow
 //$brand_gray
-
 //Theme Colors
 //Use the brand colors for your theme colors
 //Body and Heading text Colors
-$theme_body: $brand_dk_blue;
-$theme_body_link: $brand_lt_blue;
-$theme_body_link_hover: $brand_dk_blue;
-$theme_heading: $brand_dk_blue;
+$razorback_red: #9D2235;
+$charcoal: #636363;
+$theme_body: #333;
+$theme_body_link: $charcoal;
+$theme_body_link_hover: $razorback_red;
+$theme_heading: $razorback_red;
 //Footer Colors
 $theme_footer_bg: $brand_dk_blue;
-$theme_footer_txt: $brand_yellow; 
+$theme_footer_txt: $brand_yellow;
 $copyright_link: $brand_lt_blue;
 $copyright_link_hover: $brand_red;
 //Header Colors
-$theme_header_bg: $brand_dk_blue;
-$theme_header_txt: $brand_yellow; 
+$theme_header_bg: $brand_white;
+$theme_header_txt: $razorback_red;
 //Button Colors
 $theme_button_bg: $brand_yellow;
 $theme_button_txt: $brand_dk_blue;
@@ -40,58 +41,146 @@ $header-padding: 0.5em;
 $body-padding: 0;
 $footer-padding: 1em;
 @import "mixins";
-@include gridGutters($gutter-padding);	
+@include gridGutters($gutter-padding);
 @include headerPadding($header-padding);
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below:
 #header {
-	position:fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
+
 .current-section {
-	display: none;
-} 
+    display: inline-block;
+    float: left;
+    color: $charcoal;
+    font-weight: bold;
+}
+
+.site-title {
+    display: inline-block;
+}
+
 #main {
-	margin-top: 2em;
+    margin-top: 3.5em;
 }
+
 .main-body {
-	position: relative;
+    position: relative;
 }
-#countdown-section {
-	height: 100vh;
-}
+
 #scroller {
-	position: fixed;
-	right: 1em;
-	top: 50%;
-	transform: translateY(-50%);
-	.quick-jump {
-		text-align: center;
-		.quick-jump-item {
-			opacity: 0.5;
-			@include transition;
-			&.active {
-				opacity: 1;
-			}
-		}
-	}
+    position: fixed;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    .quick-jump {
+        text-align: center;
+        .quick-jump-item {
+            opacity: 0.5;
+            @include transition;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
 }
+
 #content {
-	.content-section {
-		height: 100vh;
-		.inner-section {
-			padding: 1em;
-		}
-	}
+    .content-section {
+        padding-top: 1em;
+        min-height: 100vh;
+        .inner-section {
+            padding: 1em 3em;
+        }
+    }
 }
+
 .content-section[data-section]:nth-child(odd) {
-	background: $brand_lt_blue;
-	color: $brand_white;
+    background: $razorback_red;
+    color: $brand_white;
+    @include headings() {
+        color: $brand_white;
+    }
 }
+
 .content-section[data-section]:nth-child(even) {
-	background: $brand_white;
-	color: $brand_lt_blue;
+    background: $brand_white;
+    color: #000;
+}
+
+//Custom
+#countdown-section {
+    text-align: center;
+    h1 {
+        color: $brand_white;
+    }
+    #countdown {
+        display: inline-block;
+        .unit-box {
+            font-family: $header_font;
+            font-size: 2em;
+        }
+    }
+    .game-grid {
+        font-size: 2em;
+        text-transform: uppercase;
+        & > div {
+            font-family: $header_font;
+        }
+        .vs {
+            position: relative;
+            & > div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+            }
+        }
+        .team {
+            img {
+                height: auto;
+                max-width: 100%;
+                max-height: 5em;
+            }
+        }
+    }
+}
+
+.stats-section {
+    .pure-g {
+        text-align: center;
+        & > div {
+            padding: 1em 0;
+        }
+    }
+    .stat {
+        .amt,
+        .amt-label {
+            font-family: $header_font;
+            
+        }
+        .amt {
+            font-size: 2em
+        }
+        .amt-label {
+            color: $charcoal;
+        }
+    }
+}
+
+//Mobile 
+@media screen and (max-width: $size-medium) {
+    #countdown-section {
+        #countdown {
+            .unit-box {
+                font-size: 1em;
+            }
+        }
+    }
 }

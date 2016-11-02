@@ -66,16 +66,19 @@ Either pass the px number through individually, or set it as a variable */
   z-index: 999; }
 
 .current-section {
-  display: none; }
+  display: inline-block;
+  float: left;
+  color: #636363;
+  font-weight: bold; }
+
+.site-title {
+  display: inline-block; }
 
 #main {
-  margin-top: 2em; }
+  margin-top: 3.5em; }
 
 .main-body {
   position: relative; }
-
-#countdown-section {
-  height: 100vh; }
 
 #scroller {
   position: fixed;
@@ -94,17 +97,77 @@ Either pass the px number through individually, or set it as a variable */
         opacity: 1; }
 
 #content .content-section {
-  height: 100vh; }
+  padding-top: 1em;
+  min-height: 100vh; }
   #content .content-section .inner-section {
-    padding: 1em; }
+    padding: 1em 3em; }
 
 .content-section[data-section]:nth-child(odd) {
-  background: #00AEF3;
+  background: #9D2235;
   color: #fff; }
+  .content-section[data-section]:nth-child(odd) h1 {
+    color: #fff; }
+  .content-section[data-section]:nth-child(odd) h2 {
+    color: #fff; }
+  .content-section[data-section]:nth-child(odd) h3 {
+    color: #fff; }
+  .content-section[data-section]:nth-child(odd) h4 {
+    color: #fff; }
+  .content-section[data-section]:nth-child(odd) h5 {
+    color: #fff; }
+  .content-section[data-section]:nth-child(odd) h6 {
+    color: #fff; }
 
 .content-section[data-section]:nth-child(even) {
   background: #fff;
-  color: #00AEF3; }
+  color: #000; }
+
+#countdown-section {
+  text-align: center; }
+  #countdown-section h1 {
+    color: #fff; }
+  #countdown-section #countdown {
+    display: inline-block; }
+    #countdown-section #countdown .unit-box {
+      font-family: "Razorback", sans-serif;
+      font-size: 2em; }
+  #countdown-section .game-grid {
+    font-size: 2em;
+    text-transform: uppercase; }
+    #countdown-section .game-grid > div {
+      font-family: "Razorback", sans-serif; }
+    #countdown-section .game-grid .vs {
+      position: relative; }
+      #countdown-section .game-grid .vs > div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%); }
+    #countdown-section .game-grid .team img {
+      height: auto;
+      max-width: 100%;
+      max-height: 5em; }
+
+.stats-section .pure-g {
+  text-align: center; }
+  .stats-section .pure-g > div {
+    padding: 1em 0; }
+
+.stats-section .stat .amt,
+.stats-section .stat .amt-label {
+  font-family: "Razorback", sans-serif; }
+
+.stats-section .stat .amt {
+  font-size: 2em; }
+
+.stats-section .stat .amt-label {
+  color: #636363; }
+
+@media screen and (max-width: 768px) {
+  #countdown-section #countdown .unit-box {
+    font-size: 1em; } }
 
 .pure-button {
   border-radius: 0;
@@ -153,12 +216,12 @@ body {
   position: relative; }
 
 #header {
-  background: #0F2446;
-  color: #FFDD00;
+  background: #fff;
+  color: #9D2235;
   text-align: center; }
   #header h1, #header h2, #header h3, #header h4, #header h5 {
-    background: #0F2446;
-    color: #FFDD00; }
+    background: #fff;
+    color: #9D2235; }
 
 /* fix for IE and Firefox responsiveness */
 .pure-g {
@@ -170,10 +233,10 @@ body {
   flex-flow: row wrap; }
 
 .pure-g [class*="pure-u"] {
-  font-family: "Helvetica", sans-serif; }
+  font-family: "Titillium Web", sans-serif; }
 
 .pure-g {
-  font-family: "Helvetica", sans-serif; }
+  font-family: "Titillium Web", sans-serif; }
 
 .signup-form {
   background: #9D2235; }
@@ -232,21 +295,21 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: "Razorback", sans-serif;
-  color: #0F2446;
+  color: #9D2235;
   margin: 0; }
 
 body {
-  font-family: "Helvetica", sans-serif;
-  font-size: 14pt;
-  color: #0F2446; }
+  font-family: "Titillium Web", sans-serif;
+  font-size: 15pt;
+  color: #333; }
 
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #00AEF3;
+  color: #636363;
   transition: all 0.7s ease;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease; }
   a:hover, a:active, a:focus {
-    color: #0F2446; }
+    color: #9D2235; }

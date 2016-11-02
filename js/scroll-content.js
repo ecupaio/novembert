@@ -1,38 +1,5 @@
 $(document).ready(function() {
-    $(window).keydown(function(e) {
-        if (e.keyCode == 38) {
-            scrollPrev();
-        }
-        if (e.keyCode == 40) {
-            scrollNext();
-        }
-    });
-    $('#content').on('mousewheel', function(event, delta) {
-        if ($('body,html').is(':animated')) {
-            return false;
-        }
-        if (delta < 0) {
-            scrollNext();
-        }
-        if (delta > 0) {
-            scrollPrev();
-        }
-        //Add conditional for if at top of #content
-    });
 
-
-    function scrollNext() {
-        $('body,html').animate({
-            scrollTop: $(".content-section").next(".content-section").offset().top - 50
-        }, '1000', 'swing');
-
-    }
-
-    function scrollPrev() {
-        $('body,html').animate({
-            scrollTop: $(".content-section").prev(".content-section").offset().top - 50
-        }, '1000', 'swing');
-    }
     var sectionData;
 
     function scrollDirect() {
@@ -50,30 +17,73 @@ $(document).ready(function() {
     $('.quick-jump-item').click(function() {
         sectionData = $(this).data('section');
         scrollDirect();
+        console.log(nextSection);
     });
     $(window).scroll(function() {
         var scrollTop = $(window).scrollTop();
+        var contentHeader;
+        var prevContent;
+        var nextContent;
+        var contentTop;
         $('.content-section').each(function() {
-            var contentTop = $(this).offset().top
+            contentTop = $(this).offset().top;
+            nextContent = $(this).next(".content-section");
+            prevContent = $(this).prev(".content-section");
             sectionData = $(this).data('section');
-            var contentHeader = $(this).find('.section-header').text();
+            contentHeader = $(this).find('.section-header').text();
             if (contentTop - scrollTop < 100) {
-                $('.current-section').text(contentHeader);
-                $('.site-title').hide();
-                $('.current-section').show();
+                if (contentHeader !== "") {
+                    $('.current-section').css('display', 'inline-block');
+                    $('.current-section').text(contentHeader);
+                } else {
+                    $('.current-section').hide();
+                }
                 //highlight quick jump item
                 $('.quick-jump-item').removeClass('active');
                 $('.quick-jump-item[data-section="' + sectionData + '"]').addClass('active');
             }
         });
+        var statsSection = $('.stats-section').offset().top;
+        /*if (statsSection - scrollTop < 100) {
+            console.log('stats section is at top');
+            $('.amt').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }*/
     });
 
     $('.scroll-btn').click(function() {
         if ($(this).hasClass('up')) {
             scrollPrev();
+
         } else if ($(this).hasClass('down')) {
             scrollNext();
         }
     });
+    //Counter
+    function statCounter() {
+        $('.amt').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+    }
+
+
 
 });
