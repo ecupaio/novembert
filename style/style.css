@@ -126,8 +126,12 @@ Either pass the px number through individually, or set it as a variable */
   text-align: center; }
   #countdown-section h1 {
     color: #fff; }
+  #countdown-section .countdown-bg {
+    background: url(https://s-media-cache-ak0.pinimg.com/originals/72/ca/ef/72caefd6309ea730827af7ddc83cb86a.jpg);
+    background-size: cover; }
   #countdown-section #countdown {
-    display: inline-block; }
+    display: inline-block;
+    background: rgba(99, 99, 99, 0.7); }
     #countdown-section #countdown .unit-box {
       font-family: "Razorback", sans-serif;
       font-size: 2em; }
@@ -287,12 +291,10 @@ body {
     text-decoration: none; }
     #footer a:hover {
       color: #fff; }
-  #footer .copyright-footer {
-    border: 1px solid #fff; }
-    #footer .copyright-footer .copyright-text {
-      padding: 1em; }
-      #footer .copyright-footer .copyright-text p {
-        margin: 0; }
+  #footer .copyright-footer .copyright-text {
+    padding: 1em; }
+    #footer .copyright-footer .copyright-text p {
+      margin: 0; }
 
 h1, h2, h3, h4, h5 {
   font-family: "Razorback", sans-serif;

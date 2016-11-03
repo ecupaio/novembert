@@ -1,7 +1,7 @@
 $(document).ready(function (){
-	var text = "I'm some text that needs to be encoded"; //Text of tweet
-	var urlShare = "https://url.org"; //URL to share on both Facebook and Twitter
-	var hashtags = ["hashtag1","hashtag2"]; //Hashtags array
+	var text = "#NovemBERT is upon us. Watch the countdown here:"; //Text of tweet
+	var urlShare = "http://novmembert.com"; //URL to share on both Facebook and Twitter
+	var hashtags = ["WPS","ARKvsFLA"]; //Hashtags array
 	var fbImage = "test"; //Full URL for facebook share image
 	$(".tweet-link").attr("href","https://twitter.com/intent/tweet?text="+ encodeURIComponent(text) +"&url="+ encodeURIComponent(urlShare) +"&hashtags="+ encodeURIComponent(hashtags) +""); //Tweet Link
 	$(".fb-link").attr("href","javascript:share('"+ urlShare +"', 'Fb Share', 'Facebook share popup', '"+ fbImage +"', 520, 350)"); //Fb Link
