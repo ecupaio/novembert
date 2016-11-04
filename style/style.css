@@ -60,10 +60,10 @@ Either pass the px number through individually, or set it as a variable */
   padding: 1em; }
 
 #header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999; }
+  /* position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; */ }
 
 .current-section {
   display: inline-block;
@@ -75,7 +75,7 @@ Either pass the px number through individually, or set it as a variable */
   display: inline-block; }
 
 #main {
-  margin-top: 3.5em; }
+  /* margin-top: 3.5em; */ }
 
 .main-body {
   position: relative; }
@@ -101,10 +101,11 @@ Either pass the px number through individually, or set it as a variable */
         opacity: 1; }
 
 #content .content-section {
-  padding-top: 1em;
-  min-height: 100vh; }
+  min-height: 100vh;
+  height: 100%; }
   #content .content-section .inner-section {
-    padding: 1em 3em; }
+    padding: 1em 3em;
+    height: 100%; }
 
 .content-section[data-section]:nth-child(odd) {
   background-color: #9D2235;
@@ -129,21 +130,16 @@ Either pass the px number through individually, or set it as a variable */
 .top-countdown {
   background-image: url(http://arkansasrazorbacks.com/dwrrs/images/new/jared-2a.jpg);
   background-size: cover;
-  background-position: -50% bottom;
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
   position: relative; }
-  .top-countdown .section-overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(157, 34, 53, 0.8); }
-    .top-countdown .section-overlay .inner-section {
-      position: relative;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
+  .top-countdown .inner-section {
+    position: relative;
+    background: rgba(157, 34, 53, 0.8);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 #countdown-section {
   text-align: center; }
@@ -204,7 +200,7 @@ Either pass the px number through individually, or set it as a variable */
 
 @media screen and (max-width: 568px) {
   #main {
-    margin-top: 5.5em; } }
+    /*  margin-top: 5.5em; */ } }
 
 .pure-button {
   border-radius: 0;

@@ -47,10 +47,10 @@ $footer-padding: 1em;
 @include footerPadding($footer-padding);
 //Start Theme Customizations below:
 #header {
-    position: fixed;
+    /* position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 999; */
 }
 
 .current-section {
@@ -65,7 +65,7 @@ $footer-padding: 1em;
 }
 
 #main {
-    margin-top: 3.5em;
+    /* margin-top: 3.5em; */
 }
 
 .main-body {
@@ -95,10 +95,12 @@ $footer-padding: 1em;
 
 #content {
     .content-section {
-        padding-top: 1em;
+        //padding-top: 1em;
         min-height: 100vh;
+        height: 100%;
         .inner-section {
             padding: 1em 3em;
+            height: 100%;
         }
     }
 }
@@ -121,23 +123,21 @@ $footer-padding: 1em;
     //background-image: url(../min_images/countdown-bg.jpg);
     background-image: url(http://arkansasrazorbacks.com/dwrrs/images/new/jared-2a.jpg);
     background-size: cover;
-    background-position: -50% bottom;
+    background-position: 50% bottom;
+    background-repeat: no-repeat;
     position: relative;
-    .section-overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: rgba($razorback_red,0.8);
+    
+    
+        
         .inner-section {
             position: relative;
-            height: 100%;
+            background: rgba($razorback_red,0.8);
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-    }
+    
 }
 #countdown-section {
     text-align: center;
@@ -225,6 +225,6 @@ $footer-padding: 1em;
 }
 @media screen and (max-width: $size-small) {
     #main {
-        margin-top: 5.5em;
+       /*  margin-top: 5.5em; */
     }
     }
