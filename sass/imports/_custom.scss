@@ -221,4 +221,10 @@ $footer-padding: 1em;
             }
         }
     }
+    
 }
+@media screen and (max-width: $size-small) {
+    #main {
+        margin-top: 5.5em;
+    }
+    }

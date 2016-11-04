@@ -202,6 +202,10 @@ Either pass the px number through individually, or set it as a variable */
   #countdown-section #countdown .unit-box {
     font-size: 1em; } }
 
+@media screen and (max-width: 568px) {
+  #main {
+    margin-top: 5.5em; } }
+
 .pure-button {
   border-radius: 0;
   background-color: #FFDD00;
