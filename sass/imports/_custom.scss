@@ -77,6 +77,9 @@ $footer-padding: 1em;
     right: 1em;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    z-index: 10;
     .quick-jump {
         text-align: center;
         .quick-jump-item {
@@ -90,7 +93,6 @@ $footer-padding: 1em;
 }
 
 #content {
-
     .content-section {
         padding-top: 1em;
         min-height: 100vh;
@@ -101,7 +103,7 @@ $footer-padding: 1em;
 }
 
 .content-section[data-section]:nth-child(odd) {
-    background: $razorback_red;
+    background-color: $razorback_red;
     color: $brand_white;
     @include headings() {
         color: $brand_white;
@@ -109,35 +111,59 @@ $footer-padding: 1em;
 }
 
 .content-section[data-section]:nth-child(even) {
-    background: $brand_white;
+    background-color: $brand_white;
     color: #000;
 }
 
 //Custom
+.top-countdown {
+    //background-image: url(../min_images/countdown-bg.jpg);
+    background-image: url(http://arkansasrazorbacks.com/dwrrs/images/new/jared-2a.jpg);
+    background-size: cover;
+    background-position: -50% bottom;
+    position: relative;
+    .section-overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($razorback_red,0.8);
+        .inner-section {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
 #countdown-section {
     text-align: center;
+    
     h1 {
         color: $brand_white;
     }
-    .countdown-bg {
-        background: url(https://s-media-cache-ak0.pinimg.com/originals/72/ca/ef/72caefd6309ea730827af7ddc83cb86a.jpg);
-        background-size: cover;
-    }
     #countdown {
         display: inline-block;
-        background: rgba($charcoal,0.7);
-        
         .unit-box {
             font-family: $header_font;
             font-size: 2em;
+            .unit {
+                font-size: 3em;
+            }
         }
     }
-    .game-grid {
+    
+}
+#game-grid {
         padding-top: 1em;
         font-size: 2em;
         text-transform: uppercase;
-        & > div {
+        & > [class*=pure-u] {
             font-family: $header_font;
+            padding: 0;
+            text-align: center;
         }
         .vs {
             position: relative;
@@ -151,14 +177,15 @@ $footer-padding: 1em;
             }
         }
         .team {
-            img {
-                height: auto;
-                max-width: 100%;
-                max-height: 5em;
+            .team-bg {
+                background-size: cover;
+                background-position: 50% 50%;
+                &.oppo {
+                    background-image: url(min_images/);
+                }
             }
         }
     }
-}
 
 .stats-section {
     .pure-g {
