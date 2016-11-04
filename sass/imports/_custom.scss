@@ -18,8 +18,8 @@ $theme_heading: $razorback_red;
 //Footer Colors
 $theme_footer_bg: $charcoal;
 $theme_footer_txt: $brand_white;
-$copyright_link: $razorback_red;
-$copyright_link_hover: $brand_white;
+$copyright_link: $brand_white;
+$copyright_link_hover: $razorback_red;
 //Header Colors
 $theme_header_bg: $brand_white;
 $theme_header_txt: $razorback_red;
@@ -80,6 +80,7 @@ $footer-padding: 1em;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     z-index: 10;
+    display: none;
     .quick-jump {
         text-align: center;
         .quick-jump-item {
@@ -186,7 +187,9 @@ $footer-padding: 1em;
             }
         }
     }
-
+.game-section, .schedule-section {
+    display: none;
+}
 .stats-section {
     .pure-g {
         text-align: center;
